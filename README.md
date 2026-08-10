@@ -1,60 +1,87 @@
-<h1 align="center">Hi, I'm Siyuan Luo 👋</h1>
+# Hi, I'm Siyuan Luo 👋
 
-<p align="center">
-  <em>Master's student in Software Engineering @ University of Melbourne</em><br>
-  <em>Researching audio class-incremental learning · Building toward embodied AI</em>
-</p>
+**Robot Learning · VLA / World-Action Models · MSE @ University of Melbourne**
 
----
+I build end-to-end embodied AI systems — from robot data collection and
+VLA fine-tuning to distributed training, policy serving, and real-robot deployment.
 
-### 🔭 Currently
+## 🔭 Currently
 
-- 🎓 **MSE @ Unimelb** (graduating Dec 2026), supervised by **Dr. Ting Dang**
-- 🔬 Research: **Audio-L3A** — analytic closed-form learning for audio class-incremental learning on AudioSet
-- 🤖 Sprint: **8-week embodied AI roadmap** — π₀ · Isaac Lab · SO-101 · LeRobot · ROS 2
-- 💼 Capstone: **Titan** — management plane for medical data interoperability proxies, commissioned by PredicTx Health
+- 🤖 **Algorithm Intern @ Xiong'an Institute of Artificial Intelligence**  
+  Extending FastWAM to whole-body loco-manipulation on Unitree G1.
 
----
+- 🎓 **Master of Software Engineering @ University of Melbourne**  
+  Graduating Dec 2026, supervised by **Dr. Ting Dang**.
 
-### 🧠 Technical Focus
+- 🔬 **Audio continual learning research**  
+  Developing Audio-L3A, an efficient closed-form learner for AudioSet class-incremental learning.
 
-| Area | Stack |
+## 🚀 Selected Work
+
+### π₀.₅ on Franka — Flexible Manipulation
+
+`OpenPI` · `JAX / PyTorch` · `Flow Matching` · `LeRobot` · `DROID` · `Franka`
+
+- Adapted π₀.₅ to a Franka manipulation setup for dynamic grasping and flexible
+  part sorting under randomized object poses.
+- Built the complete pipeline from raw demonstrations, forward-kinematics
+  conversion and LeRobot v2 packaging to normalization, full fine-tuning,
+  policy serving and real-robot execution.
+- Collected and quality-checked 100 demonstrations per task using a
+  DROID-style teleoperation and multi-camera setup.
+- Fine-tuned on 8×A100 GPUs and deployed inference through a WebSocket policy
+  server on an RTX 5090 workstation.
+- Used LIBERO evaluation as a regression test before deployment to the real robot.
+
+### Whole-Body WAM on Unitree G1
+
+`FastWAM` · `Video DiT + Action DiT` · `Flow Matching` · `DeepSpeed` · `G1 + Wuji`
+
+- Extending a desktop-manipulation WAM into a whole-body loco-manipulation
+  policy for Unitree G1.
+- Working on 72-D physical action prediction, multi-source robot data
+  normalization, missing-modality masks and distributed pretraining.
+- Built data-quality and human-review tooling for multi-source robot datasets:
+  [WB-WAM Data Reviewer](https://github.com/LUOSYrrrr/WB_WAM_Data_Viewer).
+
+### Audio-L3A — Efficient Audio Class-Incremental Learning
+
+`PyTorch` · `AudioSet` · `CNN14 / PANNs` · `SLURM`
+
+- Designed a frozen-backbone analytic learner with a weighted closed-form
+  classifier and per-class threshold calibration.
+- Achieved **45.16% mAP** on five-phase AudioSet-50, outperforming LwF by
+  **2.65 points** and finishing only **0.71 points** below the offline upper bound.
+- Reduced total training time to approximately **1/9** of offline joint training.
+- Evaluated five CIL baselines, two backbones and more than 80 automated experiments.
+
+## 🧠 Technical Focus
+
+| Area | Tools and Topics |
 |---|---|
-| **Robot Learning** | VLA (π₀) · flow matching · Isaac Lab · LeRobot · ROS 2 · SO-101 |
-| **Audio ML** | Class-incremental learning · CNN14 / PANNs · AudioSet · analytic methods |
-| **Deep Learning** | PyTorch · Transformers · attention · continual learning |
-| **Systems** | Linux · CUDA · Spartan HPC (SLURM, A100) · conda |
-| **Software Eng.** | Python · Java / Spring Boot · Swift / iOS · Redis · Kafka · MySQL |
+| Robot Learning | VLA · WAM · π₀ / π₀.₅ · Flow Matching · Diffusion Policy |
+| Robotics | Franka · Unitree G1 · LeRobot · DROID · LIBERO · VR Teleoperation |
+| Model Training | JAX · PyTorch · DDP · DeepSpeed · LoRA · A100 |
+| Simulation | Isaac Sim / Isaac Lab · MuJoCo |
+| Audio ML | Class-Incremental Learning · AudioSet · CNN14 / PANNs |
+| Systems | Linux · CUDA · SLURM · WebSocket Policy Serving |
 
----
+## 📚 Open-Source Notes and Tools
 
-### 📌 Highlighted Repositories
+- [**learn_embodied_papers**](https://github.com/LUOSYrrrr/learn_embodied_papers)  
+  Interactive notes on VLA, world models, flow matching and continual learning.
 
-- **[EMBODIED-AI](https://github.com/LUOSYrrrr/EMBODIED-AI)** — 8-week sprint: notes, code, paper reading log
-- **[learn_embodied_papers](https://github.com/LUOSYrrrr/learn_embodied_papers)** — paper reading notes (π₀, flow matching, CIL)
-- **Audio-L3A** *(private, thesis)* — frozen CNN14 + Weighted Analytic Classifier for audio CIL
-- **NanoMemAgent / PocketLLM** — on-device LLM agents
+- [**openpi**](https://github.com/LUOSYrrrr/openpi)  
+  Annotated fork with π₀ / π₀.₅ architecture, inference and data-pipeline walkthroughs.
 
----
+- [**WB-WAM Data Reviewer**](https://github.com/LUOSYrrrr/WB_WAM_Data_Viewer)  
+  Kubernetes-based remote review workbench for multi-source robot datasets.
 
-### 🛠️ Tech Stack
+## 🔗 Find Me
 
-<p>
-  <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white">
-  <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white">
-  <img src="https://img.shields.io/badge/CUDA-76B900?style=flat-square&logo=nvidia&logoColor=white">
-  <img src="https://img.shields.io/badge/ROS_2-22314E?style=flat-square&logo=ros&logoColor=white">
-  <img src="https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white">
-  <img src="https://img.shields.io/badge/Spring_Boot-6DB33F?style=flat-square&logo=springboot&logoColor=white">
-  <img src="https://img.shields.io/badge/Swift-FA7343?style=flat-square&logo=swift&logoColor=white">
-  <img src="https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black">
-</p>
+- Technical blog: [luosyrrrr.github.io](https://luosyrrrr.github.io/)
+- GitHub: [@LUOSYrrrr](https://github.com/LUOSYrrrr)
 
----
+## 📊 GitHub Stats
 
-### 📊 GitHub Stats
-
-<p>
-  <img src="https://github-readme-stats.vercel.app/api?username=LUOSYrrrr&show_icons=true&hide_border=true">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=LUOSYrrrr&layout=compact&hide_border=true">
-</p>
+<!-- Keep your existing GitHub stats cards here -->
