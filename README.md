@@ -84,4 +84,6 @@ VLA fine-tuning to distributed training, policy serving, and real-robot deployme
 
 ## 📊 GitHub Stats
 
-<!-- Keep your existing GitHub stats cards here -->
+
+![GitHub Stats](https://github-profile-summary-cards.vercel.app/api/cards/stats?username=LUOSYrrrr&theme=github)
+![Top Languages](https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=LUOSYrrrr&theme=github)
